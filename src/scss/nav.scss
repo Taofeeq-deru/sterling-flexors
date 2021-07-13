@@ -1,0 +1,25 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+nav {
+	background: rgba(29, 29, 29, 0.2);
+	backdrop-filter: blur(100px);
+	color: #fff;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-weight: 500;
+	// .nav-link {
+	// 	&.active {
+	// 		color: $base-color;
+	// 	}
+	// }
+}
+
+.sidebar {
+	background: rgba(29, 29, 29, 0.2);
+	backdrop-filter: blur(100px);
+	color: #fff;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-weight: 500;
+	overflow-x: hidden;
+	transition: 0.5s;
+}

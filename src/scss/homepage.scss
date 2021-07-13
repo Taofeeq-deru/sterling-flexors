@@ -1,0 +1,184 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.homepage {
+	header {
+		background-image: url("../images/banner.png");
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100vh;
+		margin-top: -86px;
+		color: #fff;
+		h1 {
+			font-weight: 800;
+			font-size: 24px;
+			@include responsive($md) {
+				font-size: 32px;
+			}
+			@include responsive($lg) {
+				font-size: 60px;
+			}
+		}
+		p {
+			font-size: 14px;
+			@include responsive($lg) {
+				font-size: 18px;
+			}
+		}
+	}
+	section {
+		padding: 4rem 0.5rem;
+		@include responsive($md) {
+			padding: 4rem 4rem;
+		}
+		@include responsive($lg) {
+			padding: 4rem 5rem;
+		}
+		@include responsive($mxl) {
+			padding: 4rem 0;
+			width: 66rem;
+			margin: 0 auto;
+		}
+		&.trainers-section {
+			p {
+				color: #636363;
+			}
+			.trainers {
+				.trainer {
+					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
+					// background-size: 350px 400px;
+					color: #fff;
+					.trainer-bg {
+						background: linear-gradient(
+							180deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgba(0, 0, 0, 0.91) 100%
+						);
+					}
+					.certified {
+						background: rgba(255, 255, 255, 0.9);
+						border-radius: 20px;
+						color: #000b04;
+						font-size: 8px;
+					}
+					.trainer-name {
+						font-weight: 800;
+						text-transform: capitalize;
+					}
+					.trainer-title {
+						background: #37352f;
+						border-radius: 20px;
+						font-weight: 300;
+						font-size: 10px;
+						text-transform: capitalize;
+					}
+					.trainer-badge {
+						border: 1px solid #ffffff;
+						box-sizing: border-box;
+						border-radius: 20px;
+						font-weight: 8px;
+					}
+				}
+			}
+		}
+		&.vision-section {
+			padding: 4rem 0.5rem;
+			@include responsive($md) {
+				padding: 4rem 3rem;
+			}
+			@include responsive($lg) {
+				padding: 4rem 4rem;
+			}
+			@include responsive($mxl) {
+				padding: 4rem 0;
+				width: 68rem;
+				margin: 0 auto;
+			}
+			.vision {
+				box-shadow: 5px 10px 20px rgba(190, 190, 190, 0.25);
+				p {
+					color: #3a3a3a;
+					width: 80%;
+					font-weight: 500;
+				}
+				h1 {
+					color: #c4c4c4;
+				}
+			}
+			.vision-img {
+				filter: drop-shadow(5px 10px 20px rgba(190, 190, 190, 0.25));
+			}
+			.session-link {
+				color: $base-color;
+				svg {
+					margin: 0.125rem 0.25rem 0;
+				}
+			}
+		}
+		&.experience-section {
+			.experience-story {
+				border-radius: 10px;
+				border: 1px solid #d7d7d7;
+				h1 {
+					color: #3db39e;
+					font-weight: 500;
+				}
+				h2 {
+					color: #3e3d3b;
+					font-weight: 500;
+				}
+				h3 {
+					color: $base-color;
+				}
+				p {
+					color: #848484;
+				}
+			}
+			.youtube-video {
+				border-radius: 10px;
+			}
+		}
+		&.fitness-section {
+			p {
+				color: #848484;
+				a {
+					color: #01af47;
+					text-decoration: none;
+				}
+			}
+			.fitness {
+				border: 1px solid #d7d7d7;
+				border-radius: 5px;
+				h1 {
+					font-weight: 500;
+					color: #3b3c3e;
+				}
+				p {
+					color: #848484;
+				}
+				.session-no {
+					color: #000000;
+				}
+				.reviews {
+					color: #01af47;
+					text-decoration: underline;
+				}
+				.start-session {
+					color: $base-color;
+					svg {
+						margin: 0 0.25rem;
+					}
+				}
+			}
+		}
+		&.reasons-section {
+			.reason {
+				border: 1px solid #d7d7d7;
+				border-radius: 5px;
+			}
+		}
+	}
+}

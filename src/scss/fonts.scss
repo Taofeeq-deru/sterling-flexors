@@ -1,0 +1,32 @@
+//Neue Haas Unica font
+@font-face {
+	font-family: "Neue Haas Unica";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Neue Haas Unica Regular"),
+		url("./../font/NeueHaasUnica-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Neue Haas Unica";
+	font-style: normal;
+	font-weight: 500;
+	src: local("Neue Haas Unica Medium"),
+		url("./../font/NeueHaasUnica-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Neue Haas Unica";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Neue Haas Unica Bold"),
+		url("./../font/NeueHaasUnica-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Neue Haas Unica";
+	font-style: normal;
+	font-weight: 900;
+	src: local("Neue Haas Unica Black"),
+		url("./../font/NeueHaasUnica-Black.woff") format("woff");
+}
