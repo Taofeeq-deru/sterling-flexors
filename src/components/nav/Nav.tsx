@@ -2,6 +2,7 @@ import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "../index";
 import { menu } from "icons";
+import { form, whatsapp } from "utilities/constants";
 
 type Props = {
 	openSidebar: () => void;
@@ -43,14 +44,14 @@ export const Nav: FC<Props> = ({ openSidebar }) => {
 						kind="link"
 						btnType="transaparent"
 						className="mr-2"
-						to="https://wa.me/2348140192982"
+						to={whatsapp}
 						target="_whatsapp"
 					/>
 					<Button
 						text="Get Started"
 						kind="link"
 						btnType="secondary"
-						to="http://bit.ly/3oLLhZe"
+						to={form}
 						target="_form"
 					/>
 				</div>

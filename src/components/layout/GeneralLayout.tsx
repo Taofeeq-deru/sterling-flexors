@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Nav, Sidebar } from "components";
+import { Nav, Sidebar, Footer } from "components";
 
 export const GeneralLayout: FC = ({ children }) => {
 	const [sidebar, setSidebar] = useState(false);
@@ -9,6 +9,7 @@ export const GeneralLayout: FC = ({ children }) => {
 			<Nav openSidebar={() => setSidebar(true)} />
 			<Sidebar sidebar={sidebar} close={() => setSidebar(false)} />
 			<div id="content">{children}</div>
+			<Footer />
 		</div>
 	);
 };

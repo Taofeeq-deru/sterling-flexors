@@ -33,7 +33,7 @@
 		}
 	}
 	section {
-		padding: 1rem 0.5rem;
+		padding: 1.5rem 2rem;
 		@include responsive($md) {
 			padding: 4rem 4rem;
 		}
@@ -231,6 +231,9 @@
 				}
 				p.continue {
 					color: $base-color;
+					svg {
+						margin: 0 0.25rem;
+					}
 				}
 			}
 		}

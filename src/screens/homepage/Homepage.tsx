@@ -22,6 +22,7 @@ import {
 	VibeProps,
 } from "./partials";
 import session from "images/session-bg.png";
+import { form } from "utilities/constants";
 
 const Homepage: FC = () => {
 	return (
@@ -40,7 +41,7 @@ const Homepage: FC = () => {
 						text="Book Fitness Session"
 						kind="link"
 						btnType="primary"
-						to="http://bit.ly/3oLLhZe"
+						to={form}
 						target="_form"
 						className="my-3 mx-auto"
 					/>
@@ -109,7 +110,7 @@ const Homepage: FC = () => {
 					</div>
 				</div>
 				<a
-					href="http://bit.ly/3oLLhZe"
+					href={form}
 					target="_form"
 					rel="noopener noreferrer"
 					className="session-link w-max flex sub-title-lg my-5 ml-8"
@@ -143,11 +144,7 @@ const Homepage: FC = () => {
 				</h1>
 				<p className="sub-title-sm text-center mb-12">
 					These are curated list of fitness program we help people with.{" "}
-					<a
-						href="http://bit.ly/3oLLhZe"
-						target="_form"
-						rel="noopener noreferrer"
-					>
+					<a href={form} target="_form" rel="noopener noreferrer">
 						Start a session too!
 					</a>
 				</p>
@@ -167,7 +164,7 @@ const Homepage: FC = () => {
 										{item?.reviews} reviews
 									</span>
 									<a
-										href="http://bit.ly/3oLLhZe"
+										href={form}
 										target="_form"
 										rel="noopener noreferrer"
 										className="start-session flex flex-nowrap items-center text"
@@ -203,7 +200,7 @@ const Homepage: FC = () => {
 						text="Get Started For Free"
 						kind="link"
 						btnType="primary"
-						to="http://bit.ly/3oLLhZe"
+						to={form}
 						target="_form"
 					/>
 				</div>
@@ -247,10 +244,10 @@ const Homepage: FC = () => {
 			<div className="vibes-big-cont">
 				<section className="vibes-section">
 					<h1 className="title mb-7">Fitness Vibes</h1>
-					<div className="flex flex-row flex-wrap justify-around md:justify-between">
+					<div className="flex overflow-x-scroll w-full scrollbar-white py-3">
 						{vibes?.map((vibe: VibeProps, i: number) => (
 							<div
-								className="vibe flex flex-col my-4 justify-between w-60 lg:w-80"
+								className="vibe flex flex-col justify-between w-60 mr-4 flex-shrink-0 lg:w-80"
 								key={i}
 							>
 								<img
@@ -285,7 +282,7 @@ const Homepage: FC = () => {
 						text="Get Started for free"
 						kind="link"
 						btnType="primary"
-						to="http://bit.ly/3oLLhZe"
+						to={form}
 						target="_form"
 						className="mt-9 mx-auto"
 					/>
