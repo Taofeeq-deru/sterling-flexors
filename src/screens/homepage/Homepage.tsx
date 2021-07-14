@@ -18,29 +18,33 @@ import {
 	ReasonProps,
 	clients,
 	ClientProps,
+	vibes,
+	VibeProps,
 } from "./partials";
 import session from "images/session-bg.png";
 
 const Homepage: FC = () => {
 	return (
 		<div className="homepage">
-			<header className="flex flex-col justify-center items-center">
-				<h1 className="text-center">
-					Live Fitness/Workout Session Tailored to your fitness needs.
-				</h1>
-				<p className="text-center my-4">
-					Enjoy a 1-on-1 live fitness training with an expert fitness trainer
-					right on your screen. You only get trained per your needs, easy to get
-					started and affordable.
-				</p>
-				<Button
-					text="Book Fitness Session"
-					kind="link"
-					btnType="primary"
-					to="http://bit.ly/3oLLhZe"
-					target="_form"
-					className="my-3 mx-auto"
-				/>
+			<header>
+				<div className="header-text-cont w-full h-full flex flex-col justify-center items-center">
+					<h1 className="text-center">
+						Live Fitness/Workout Session Tailored to your fitness needs.
+					</h1>
+					<p className="text-center my-4">
+						Enjoy a 1-on-1 live fitness training with an expert fitness trainer
+						right on your screen. You only get trained per your needs, easy to
+						get started and affordable.
+					</p>
+					<Button
+						text="Book Fitness Session"
+						kind="link"
+						btnType="primary"
+						to="http://bit.ly/3oLLhZe"
+						target="_form"
+						className="my-3 mx-auto"
+					/>
+				</div>
 			</header>
 			<section className="trainers-section">
 				<h1 className="title text-center mb-3">Meet our Trainers</h1>
@@ -240,6 +244,53 @@ const Homepage: FC = () => {
 					))}
 				</div>
 			</section>
+			<div className="vibes-big-cont">
+				<section className="vibes-section">
+					<h1 className="title mb-7">Fitness Vibes</h1>
+					<div className="flex flex-row flex-wrap justify-around md:justify-between">
+						{vibes?.map((vibe: VibeProps, i: number) => (
+							<div
+								className="vibe flex flex-col my-4 justify-between w-60 lg:w-80"
+								key={i}
+							>
+								<img
+									src={vibe?.img}
+									alt={vibe?.title}
+									className="vibe-img w-full"
+								/>
+								<h1 className="sub-title-lg">{vibe?.title}</h1>
+								<p className="sub-title-sm">{vibe?.story}</p>
+								<div className="flex justify-between items-center">
+									<p className="author sub-title-sm capitalize">
+										Posted by {vibe?.author}
+									</p>
+									<p className="sub-title-sm continue flex flex-nowrap items-center cursor-pointer">
+										Continue reading {rightArrow}
+									</p>
+								</div>
+							</div>
+						))}
+					</div>
+				</section>
+			</div>
+			<div className="extra-big-cont">
+				<section className="extra-section flex flex-col justify-center items-center h-full">
+					<h1 className="text-center">
+						Join other top executives, home makers and many hat wearers
+					</h1>
+					<p className="text-center my-4">
+						Try Sterling Flexors and enjoy a healthy fit life.
+					</p>
+					<Button
+						text="Get Started for free"
+						kind="link"
+						btnType="primary"
+						to="http://bit.ly/3oLLhZe"
+						target="_form"
+						className="mt-9 mx-auto"
+					/>
+				</section>
+			</div>
 		</div>
 	);
 };

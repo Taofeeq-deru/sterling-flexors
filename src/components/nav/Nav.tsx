@@ -9,7 +9,7 @@ type Props = {
 
 export const Nav: FC<Props> = ({ openSidebar }) => {
 	return (
-		<nav className="sticky">
+		<nav className="fixed top-0 left-0 right-0 z-50">
 			<div className="py-5 px-10 flex justify-between items-center">
 				<NavLink to="/">
 					<img src="images/logo.png" alt="sterling flexors" />
