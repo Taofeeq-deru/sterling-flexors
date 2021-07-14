@@ -2,6 +2,7 @@ import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "../index";
 import { cancel } from "icons";
+import { form, whatsapp } from "utilities/constants";
 
 type Props = {
 	sidebar: boolean;
@@ -49,14 +50,14 @@ export const Sidebar: FC<Props> = ({ sidebar, close }) => {
 					kind="link"
 					btnType="transaparent"
 					className="my-4"
-					to="https://wa.me/2348140192982"
+					to={whatsapp}
 					target="_whatsapp"
 				/>
 				<Button
 					text="Get Started"
 					kind="link"
 					btnType="secondary"
-					to="http://bit.ly/3oLLhZe"
+					to={form}
 					target="_form"
 				/>
 			</div>

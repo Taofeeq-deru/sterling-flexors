@@ -3,6 +3,7 @@
 @import "./mixins.scss";
 @import "./loadingPage.scss";
 @import "./nav.scss";
+@import "./footer.scss";
 @import "./button.scss";
 @import "./homepage.scss";
 
@@ -98,6 +99,31 @@ body {
 		}
 		&::-webkit-scrollbar-thumb:hover {
 			background: #3f3f3f;
+		}
+	}
+}
+.scrollbar-white {
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+		width: 0;
+	}
+	@include responsive($lg) {
+		&::-webkit-scrollbar {
+			display: inline;
+			width: 10px;
+			height: 10px;
+		}
+		&::-webkit-scrollbar-track {
+			background: #1d1d1d;
+			border-radius: 10px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #fff;
+			border-radius: 10px;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background: #d5d4d4;
 		}
 	}
 }

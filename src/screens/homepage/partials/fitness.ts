@@ -1,7 +1,7 @@
 import weight from "images/weight-loss.png";
 
 export type FitnessProps = {
-	img: any;
+	img: string;
 	title: string;
 	story: string;
 	number: number;

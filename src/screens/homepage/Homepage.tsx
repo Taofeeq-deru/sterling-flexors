@@ -7,6 +7,7 @@ import {
 	rightArrowCircle,
 	people,
 	rightArrow,
+	verticalLine,
 } from "icons";
 import {
 	trainers,
@@ -15,29 +16,36 @@ import {
 	FitnessProps,
 	reasons,
 	ReasonProps,
+	clients,
+	ClientProps,
+	vibes,
+	VibeProps,
 } from "./partials";
 import session from "images/session-bg.png";
+import { form } from "utilities/constants";
 
 const Homepage: FC = () => {
 	return (
 		<div className="homepage">
-			<header className="flex flex-col justify-center items-center">
-				<h1 className="text-center">
-					Live Fitness/Workout Session Tailored to your fitness needs.
-				</h1>
-				<p className="text-center my-4">
-					Enjoy a 1-on-1 live fitness training with an expert fitness trainer
-					right on your screen. You only get trained per your needs, easy to get
-					started and affordable.
-				</p>
-				<Button
-					text="Book Fitness Session"
-					kind="link"
-					btnType="primary"
-					to="http://bit.ly/3oLLhZe"
-					target="_form"
-					className="my-3 mx-auto"
-				/>
+			<header>
+				<div className="header-text-cont w-full h-full flex flex-col justify-center items-center">
+					<h1 className="text-center">
+						Live Fitness/Workout Session Tailored to your fitness needs.
+					</h1>
+					<p className="text-center my-4">
+						Enjoy a 1-on-1 live fitness training with an expert fitness trainer
+						right on your screen. You only get trained per your needs, easy to
+						get started and affordable.
+					</p>
+					<Button
+						text="Book Fitness Session"
+						kind="link"
+						btnType="primary"
+						to={form}
+						target="_form"
+						className="my-3 mx-auto"
+					/>
+				</div>
 			</header>
 			<section className="trainers-section">
 				<h1 className="title text-center mb-3">Meet our Trainers</h1>
@@ -102,7 +110,7 @@ const Homepage: FC = () => {
 					</div>
 				</div>
 				<a
-					href="http://bit.ly/3oLLhZe"
+					href={form}
 					target="_form"
 					rel="noopener noreferrer"
 					className="session-link w-max flex sub-title-lg my-5 ml-8"
@@ -124,7 +132,7 @@ const Homepage: FC = () => {
 					</div>
 					<div className="youtube-video flex-grow h-64 mt-4 md:h-96 md:mt-0 md:ml-6">
 						<YoutubeVideo
-							url="UBMk30rjy0o"
+							url="3B8VRF3EjCM"
 							title="Mrs Idoko Blessing's Story"
 						/>
 					</div>
@@ -136,18 +144,14 @@ const Homepage: FC = () => {
 				</h1>
 				<p className="sub-title-sm text-center mb-12">
 					These are curated list of fitness program we help people with.{" "}
-					<a
-						href="http://bit.ly/3oLLhZe"
-						target="_form"
-						rel="noopener noreferrer"
-					>
+					<a href={form} target="_form" rel="noopener noreferrer">
 						Start a session too!
 					</a>
 				</p>
 				<div className="fitness-sessions flex flex-wrap justify-around sm:justify-between">
 					{fitness?.map((item: FitnessProps, i: number) => (
 						<div className="fitness w-60 h-80 my-4" key={i}>
-							<img src={item?.img} alt="weight loss" className="w-full h-36" />
+							<img src={item?.img} alt={item?.title} className="w-full h-36" />
 							<div className="w-full h-44 flex flex-col justify-around px-4">
 								<h1 className="sub-title-lg capitalize">{item?.title}</h1>
 								<p className="text">{item?.story}</p>
@@ -160,7 +164,7 @@ const Homepage: FC = () => {
 										{item?.reviews} reviews
 									</span>
 									<a
-										href="http://bit.ly/3oLLhZe"
+										href={form}
 										target="_form"
 										rel="noopener noreferrer"
 										className="start-session flex flex-nowrap items-center text"
@@ -191,16 +195,99 @@ const Homepage: FC = () => {
 						</div>
 					))}
 				</div>
-				<div className="flex justify-center my-14">
+				<div className="flex justify-center mt-12">
 					<Button
 						text="Get Started For Free"
 						kind="link"
 						btnType="primary"
-						to="http://bit.ly/3oLLhZe"
+						to={form}
 						target="_form"
 					/>
 				</div>
 			</section>
+			<section className="clients-section flex flex-col lg:flex-row lg:items-center">
+				<div className="title-cont flex items-center w-full lg:w-1/3 lg:mr-2 xl:mr-4">
+					<div className="xl:mr-2">
+						<h1 className="title text-center mb-3 lg:text-left lg:mb-0">
+							What our clients are saying about us
+						</h1>
+						<p className="sub-title-sm text-center mb-12 lg:text-left lg:mb-0">
+							We ask people who use Sterling flexors and people who are excited
+							about what we do here what sees that makes them consider us to be
+							their fitness training partner.
+						</p>
+					</div>
+					<span className="hidden lg:flex">{verticalLine}</span>
+				</div>
+				<div className="flex overflow-x-scroll w-full lg:w-2/3 scrollbar py-3">
+					{clients?.map((client: ClientProps, i: number) => (
+						<div
+							className="flex client w-60 md:w-80 flex-shrink-0 mr-2 xl:mr-4"
+							key={i}
+						>
+							<img
+								src={client?.img}
+								alt={client?.name}
+								className="w-16 md:w-28"
+							/>
+							<div className="px-2 py-4 flex flex-col flex-grow">
+								<p className="text">{client?.story}</p>
+								<div className="mt-auto">
+									<h1 className="text capitalize">{client?.name}</h1>
+									<p className="text job">{client?.job}</p>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</section>
+			<div className="vibes-big-cont">
+				<section className="vibes-section">
+					<h1 className="title mb-7">Fitness Vibes</h1>
+					<div className="flex overflow-x-scroll w-full scrollbar-white py-3">
+						{vibes?.map((vibe: VibeProps, i: number) => (
+							<div
+								className="vibe flex flex-col justify-between w-60 mr-4 flex-shrink-0 lg:w-80"
+								key={i}
+							>
+								<img
+									src={vibe?.img}
+									alt={vibe?.title}
+									className="vibe-img w-full"
+								/>
+								<h1 className="sub-title-lg">{vibe?.title}</h1>
+								<p className="sub-title-sm">{vibe?.story}</p>
+								<div className="flex justify-between items-center">
+									<p className="author sub-title-sm capitalize">
+										Posted by {vibe?.author}
+									</p>
+									<p className="sub-title-sm continue flex flex-nowrap items-center cursor-pointer">
+										Continue reading {rightArrow}
+									</p>
+								</div>
+							</div>
+						))}
+					</div>
+				</section>
+			</div>
+			<div className="extra-big-cont">
+				<section className="extra-section flex flex-col justify-center items-center h-full">
+					<h1 className="text-center">
+						Join other top executives, home makers and many hat wearers
+					</h1>
+					<p className="text-center my-4">
+						Try Sterling Flexors and enjoy a healthy fit life.
+					</p>
+					<Button
+						text="Get Started for free"
+						kind="link"
+						btnType="primary"
+						to={form}
+						target="_form"
+						className="mt-9 mx-auto"
+					/>
+				</section>
+			</div>
 		</div>
 	);
 };
