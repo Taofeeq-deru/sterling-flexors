@@ -7,6 +7,7 @@ import {
 	rightArrowCircle,
 	people,
 	rightArrow,
+	verticalLine,
 } from "icons";
 import {
 	trainers,
@@ -15,6 +16,8 @@ import {
 	FitnessProps,
 	reasons,
 	ReasonProps,
+	clients,
+	ClientProps,
 } from "./partials";
 import session from "images/session-bg.png";
 
@@ -147,7 +150,7 @@ const Homepage: FC = () => {
 				<div className="fitness-sessions flex flex-wrap justify-around sm:justify-between">
 					{fitness?.map((item: FitnessProps, i: number) => (
 						<div className="fitness w-60 h-80 my-4" key={i}>
-							<img src={item?.img} alt="weight loss" className="w-full h-36" />
+							<img src={item?.img} alt={item?.title} className="w-full h-36" />
 							<div className="w-full h-44 flex flex-col justify-around px-4">
 								<h1 className="sub-title-lg capitalize">{item?.title}</h1>
 								<p className="text">{item?.story}</p>
@@ -191,7 +194,7 @@ const Homepage: FC = () => {
 						</div>
 					))}
 				</div>
-				<div className="flex justify-center my-14">
+				<div className="flex justify-center mt-12">
 					<Button
 						text="Get Started For Free"
 						kind="link"
@@ -199,6 +202,42 @@ const Homepage: FC = () => {
 						to="http://bit.ly/3oLLhZe"
 						target="_form"
 					/>
+				</div>
+			</section>
+			<section className="clients-section flex flex-col lg:flex-row lg:items-center">
+				<div className="title-cont flex items-center w-full lg:w-1/3 lg:mr-2 xl:mr-4">
+					<div className="xl:mr-2">
+						<h1 className="title text-center mb-3 lg:text-left lg:mb-0">
+							What our clients are saying about us
+						</h1>
+						<p className="sub-title-sm text-center mb-12 lg:text-left lg:mb-0">
+							We ask people who use Sterling flexors and people who are excited
+							about what we do here what sees that makes them consider us to be
+							their fitness training partner.
+						</p>
+					</div>
+					<span className="hidden lg:flex">{verticalLine}</span>
+				</div>
+				<div className="flex overflow-x-scroll w-full lg:w-2/3 scrollbar py-3">
+					{clients?.map((client: ClientProps, i: number) => (
+						<div
+							className="flex client w-60 md:w-80 flex-shrink-0 mr-2 xl:mr-4"
+							key={i}
+						>
+							<img
+								src={client?.img}
+								alt={client?.name}
+								className="w-16 md:w-28"
+							/>
+							<div className="px-2 py-4 flex flex-col flex-grow">
+								<p className="text">{client?.story}</p>
+								<div className="mt-auto">
+									<h1 className="text capitalize">{client?.name}</h1>
+									<p className="text job">{client?.job}</p>
+								</div>
+							</div>
+						</div>
+					))}
 				</div>
 			</section>
 		</div>

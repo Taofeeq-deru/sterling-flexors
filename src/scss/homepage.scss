@@ -28,7 +28,7 @@
 		}
 	}
 	section {
-		padding: 4rem 0.5rem;
+		padding: 1rem 0.5rem;
 		@include responsive($md) {
 			padding: 4rem 4rem;
 		}
@@ -178,6 +178,27 @@
 			.reason {
 				border: 1px solid #d7d7d7;
 				border-radius: 5px;
+			}
+		}
+		&.clients-section {
+			p.sub-title-sm {
+				color: #848484;
+			}
+			h1.title {
+				line-height: 30px;
+			}
+			.client {
+				border-radius: 5px;
+				border: 1px solid #d7d7d7;
+				p.client-story {
+					color: #3b3c3e;
+				}
+				p.job {
+					color: $base-color;
+				}
+				h1 {
+					color: #000;
+				}
 			}
 		}
 	}

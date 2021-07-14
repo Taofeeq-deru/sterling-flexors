@@ -574,3 +574,15 @@ export const people = (
 		/>
 	</svg>
 );
+
+export const verticalLine = (
+	<svg
+		width="1"
+		height="110"
+		viewBox="0 0 1 110"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path d="M0.5 0V109.5" stroke="#D7D7D7" />
+	</svg>
+);

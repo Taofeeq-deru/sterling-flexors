@@ -5,7 +5,7 @@ import tosin from "images/trainers/tosin.png";
 
 export type TrainerProp = {
 	name: string;
-	img: any;
+	img: string;
 	title: string;
 	star: string;
 	stretch: string;
