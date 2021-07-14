@@ -2,26 +2,28 @@
 @import "./mixins.scss";
 
 footer {
-	padding: 4rem 2rem;
 	background-color: #1d1d1d;
-	color: #fff;
-	@include responsive($md) {
-		padding: 4rem 4rem;
-	}
-	@include responsive($lg) {
-		padding: 4rem 5rem;
-	}
-	@include responsive($mxl) {
-		padding: 4rem 0;
-		width: 66rem;
-		margin: 0 auto;
-	}
-	h1 {
-		font-weight: 500;
-	}
-	.contacts {
-		font-weight: 500;
-		color: $base-color;
-		text-decoration: none;
+	.footer {
+		padding: 4rem 2rem;
+		color: #fff;
+		@include responsive($md) {
+			padding: 4rem 4rem;
+		}
+		@include responsive($lg) {
+			padding: 4rem 5rem;
+		}
+		@include responsive($mxl) {
+			padding: 4rem 0;
+			width: 66rem;
+			margin: 0 auto;
+		}
+		h1 {
+			font-weight: 500;
+		}
+		.contacts {
+			font-weight: 500;
+			color: $base-color;
+			text-decoration: none;
+		}
 	}
 }
