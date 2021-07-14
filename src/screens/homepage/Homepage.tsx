@@ -113,7 +113,7 @@ const Homepage: FC = () => {
 					href={form}
 					target="_form"
 					rel="noopener noreferrer"
-					className="session-link w-max flex sub-title-lg my-5 ml-8"
+					className="session-link w-max flex items-center sub-title-lg my-5 ml-8"
 				>
 					Book a session now {rightArrowCircle}
 				</a>
