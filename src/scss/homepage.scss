@@ -16,6 +16,7 @@
 				font-weight: 800;
 				font-size: 24px;
 				line-height: 95%;
+				width: 90%;
 				@include responsive($md) {
 					font-size: 32px;
 				}
