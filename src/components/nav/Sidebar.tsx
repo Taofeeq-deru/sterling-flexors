@@ -12,7 +12,7 @@ type Props = {
 export const Sidebar: FC<Props> = ({ sidebar, close }) => {
 	return (
 		<div
-			className={`sidebar h-screen absolute right-0 top-0 z-50 ${
+			className={`sidebar h-screen fixed right-0 top-0 bottom-0 z-50 ${
 				sidebar ? "w-56 block" : "hidden"
 			}`}
 			onClick={(e: any) => e.stopPropagation()}
@@ -59,6 +59,7 @@ export const Sidebar: FC<Props> = ({ sidebar, close }) => {
 					btnType="secondary"
 					to={form}
 					target="_form"
+					className="text-center"
 				/>
 			</div>
 		</div>
