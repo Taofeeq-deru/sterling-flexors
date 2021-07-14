@@ -52,7 +52,7 @@ export const Footer = () => {
 						</div>
 					</div>
 					<div className="flex flex-row flex-nowrap">
-						<div className="flex flex-col my-2 sm:my-0 sm:mr-5">
+						<div className="flex flex-col my-2 mr-1 sm:my-0 sm:mr-5">
 							<h1 className="sub-title-xl uppercase mb-3">products</h1>
 							<div className="flex flex-col">
 								<NavLink to="/" className="mb-2 sub-title-lg">
