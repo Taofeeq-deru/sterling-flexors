@@ -7,7 +7,6 @@ import {
 	rightArrowCircle,
 	people,
 	rightArrow,
-	verticalLine,
 } from "icons";
 import {
 	trainers,
@@ -22,7 +21,7 @@ import {
 	VibeProps,
 } from "./partials";
 import session from "images/session-bg.png";
-import { form } from "utilities/constants";
+import { form, youtube } from "utilities/constants";
 
 const Homepage: FC = () => {
 	return (
@@ -70,9 +69,9 @@ const Homepage: FC = () => {
 								<div className="flex justify-between">
 									<div>
 										<p className="trainer-name">{trainer?.name}</p>
-										<span className="trainer-title w-40 h-6 p-1">
+										<div className="trainer-title w-44 h-auto p-1">
 											{trainer?.title}
-										</span>
+										</div>
 									</div>
 									<div>
 										<span className="trainer-badge flex flex-nowrap items-center justify-between p-1 h-5 w-12 mt-2 mb-1">
@@ -121,20 +120,18 @@ const Homepage: FC = () => {
 			<section className="experience-section">
 				<div className="flex flex-col md:flex-row items-center">
 					<div className="experience-story w-full md:w-60 lg:w-72 h-80 p-7">
-						<h1 className="sub-title-sm mb-3">Experience Story</h1>
-						<h2 className="sub-title-xl mb-12">Mrs Idoko Blessing</h2>
-						<p className="sub-title-sm mb-5">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-							viverra nibh cras pulvinar mattis nunc.
+						<h1 className="sub-title-sm mb-2">Experience Story</h1>
+						<h2 className="sub-title-xl mb-8">Mrs Folashade O.</h2>
+						<p className="sub-title-sm mb-3 italic">
+							“Sterling flexor is like having a gym coach tailored to your
+							personal need at your own personal time. So, to burn up that
+							excess fat and have your muscles toned at your convenient time and
+							place, choose them”
 						</p>
 						<h3 className="sub-title-md">An Enterpreneur</h3>
 					</div>
 					<div className="youtube-video flex-grow h-64 mt-4 md:h-96 md:mt-0 md:ml-6">
-						<YoutubeVideo
-							url="3B8VRF3EjCM"
-							title="Mrs Idoko Blessing's Story"
-						/>
+						<YoutubeVideo url={youtube} title="Training Story" />
 					</div>
 				</div>
 			</section>
@@ -150,7 +147,7 @@ const Homepage: FC = () => {
 				</p>
 				<div className="fitness-sessions flex flex-wrap justify-around sm:justify-between">
 					{fitness?.map((item: FitnessProps, i: number) => (
-						<div className="fitness w-60 h-80 my-4" key={i}>
+						<div className="fitness w-72 h-80 my-4 lg:mr-2 xl:mr-0" key={i}>
 							<img src={item?.img} alt={item?.title} className="w-full h-36" />
 							<div className="w-full h-44 flex flex-col justify-around px-4">
 								<h1 className="sub-title-lg capitalize">{item?.title}</h1>
@@ -160,9 +157,14 @@ const Homepage: FC = () => {
 									this week
 								</span>
 								<div className="flex justify-between items-center">
-									<span className="small-text reviews">
-										{item?.reviews} reviews
-									</span>
+									<a
+										href={item?.link}
+										target="_more"
+										rel="noopener noreferrer"
+										className="small-text learn-more"
+									>
+										Learn more
+									</a>
 									<a
 										href={form}
 										target="_form"
@@ -205,30 +207,25 @@ const Homepage: FC = () => {
 					/>
 				</div>
 			</section>
-			<section className="clients-section flex flex-col lg:flex-row lg:items-center">
-				<div className="title-cont flex items-center w-full lg:w-1/3 lg:mr-2 xl:mr-4">
-					<div className="xl:mr-2">
-						<h1 className="title text-center mb-3 lg:text-left lg:mb-0">
-							What our clients are saying about us
-						</h1>
-						<p className="sub-title-sm text-center mb-12 lg:text-left lg:mb-0">
-							We ask people who use Sterling flexors and people who are excited
-							about what we do here what sees that makes them consider us to be
-							their fitness training partner.
-						</p>
-					</div>
-					<span className="hidden lg:flex">{verticalLine}</span>
-				</div>
-				<div className="flex overflow-x-scroll w-full lg:w-2/3 scrollbar py-3">
+			<section className="clients-section">
+				<h1 className="title text-center mb-3">
+					What our clients are saying about us
+				</h1>
+				<p className="sub-title-sm text-center mb-12">
+					We ask people who use Sterling flexors and people who are excited
+					about what we do here what sees that makes them consider us to be
+					their fitness training partner.
+				</p>
+				<div className="flex overflow-x-scroll w-full scrollbar py-3 lg:justify-center">
 					{clients?.map((client: ClientProps, i: number) => (
 						<div
-							className="flex client w-60 md:w-80 flex-shrink-0 mr-2 xl:mr-4"
+							className="flex client w-64 md:w-96 flex-shrink-0 mr-2 xl:mr-4"
 							key={i}
 						>
 							<img
 								src={client?.img}
 								alt={client?.name}
-								className="w-16 md:w-28"
+								className="w-20 md:w-32"
 							/>
 							<div className="px-2 py-4 flex flex-col flex-grow">
 								<p className="text">{client?.story}</p>
@@ -261,9 +258,14 @@ const Homepage: FC = () => {
 									<p className="author sub-title-sm capitalize">
 										Posted by {vibe?.author}
 									</p>
-									<p className="sub-title-sm continue flex flex-nowrap items-center cursor-pointer">
+									<a
+										href={vibe?.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="sub-title-sm continue flex flex-nowrap items-center cursor-pointer"
+									>
 										Continue reading {rightArrow}
-									</p>
+									</a>
 								</div>
 							</div>
 						))}

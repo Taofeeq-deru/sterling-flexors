@@ -27,6 +27,7 @@ export const YoutubeVideo: FC<Props> = ({ url, title, radius }) => {
 				loading="lazy"
 				width="100%"
 				height="100%"
+				className={loading ? "hidden" : ""}
 				style={{ borderRadius: radius || "10px" }}
 			/>
 		</div>
