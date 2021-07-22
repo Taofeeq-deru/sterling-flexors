@@ -2,6 +2,8 @@ import john from "images/trainers/john.png";
 import bamidele from "images/trainers/bamidele.png";
 import gideon from "images/trainers/gideon.png";
 import tosin from "images/trainers/tosin.png";
+import egumena from "images/trainers/egumena.png";
+import igho from "images/trainers/igho.png";
 
 export type TrainerProp = {
 	name: string;
@@ -39,5 +41,20 @@ export const trainers = [
 		title: "aerobic, weight, rehabilitation",
 		star: "5.0",
 		stretch: "24",
+	},
+	{
+		name: "egumena faith",
+		img: egumena,
+		title: "tummy workout, cardio programs for stamina and weight loss",
+		star: "4.7",
+		stretch: "09",
+	},
+	{
+		name: "igho hope",
+		img: igho,
+		title:
+			"high intensity interval training (HIIT), abs and strength (build up) programs",
+		star: "4.5",
+		stretch: "15",
 	},
 ];

@@ -168,7 +168,7 @@
 				.session-no {
 					color: #000000;
 				}
-				.reviews {
+				.learn-more {
 					color: #01af47;
 					text-decoration: underline;
 				}
@@ -189,9 +189,6 @@
 		&.clients-section {
 			p.sub-title-sm {
 				color: #848484;
-			}
-			h1.title {
-				line-height: 30px;
 			}
 			.client {
 				border-radius: 5px;
@@ -230,7 +227,7 @@
 				p.author {
 					font-weight: 500;
 				}
-				p.continue {
+				a.continue {
 					color: $base-color;
 					svg {
 						margin: 0 0.25rem;
