@@ -6,7 +6,8 @@ export const phoneNumber = {
 };
 export const email = "sterlingflexors@gmail.com";
 export const smLinks = {
-	facebook: "https://facebook.com/",
-	twitter: "https://twitter.com/",
-	instagram: "https://instagram.com/",
+	facebook: "https://facebook.com/Sterling-Flexors-105769378056555/",
+	twitter: "https://twitter.com/SterlingFlexors",
+	instagram: "https://instagram.com/sterling_flexors/",
 };
+export const youtube = "-QgbVckvmTQ";

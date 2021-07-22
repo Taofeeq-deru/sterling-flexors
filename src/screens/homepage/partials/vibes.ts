@@ -17,7 +17,7 @@ export const vibes = [
 		story:
 			"Enjoy a 1-on-1 live fitness training with an expert fitness trainer right on your screen. You only get trained per your needs, easy to get started and affordable.",
 		author: "Ayo Balogun",
-		link: "/link to blog post",
+		link: "https://link.medium.com/MkTNwU094hb",
 	},
 	{
 		img: bellyFat,
@@ -25,7 +25,7 @@ export const vibes = [
 		story:
 			"Enjoy a 1-on-1 live fitness training with an expert fitness trainer right on your screen. You only get trained per your needs, easy to get started and affordable.",
 		author: "Tosin Aderinto",
-		link: "/link to blog post",
+		link: "https://link.medium.com/qTZV7PPJ2hb",
 	},
 	{
 		img: partner,
@@ -33,6 +33,6 @@ export const vibes = [
 		story:
 			"Enjoy a 1-on-1 live fitness training with an expert fitness trainer right on your screen. You only get trained per your needs, easy to get started and affordable.",
 		author: "Beth Okanlawon",
-		link: "/link to blog post",
+		link: "https://link.medium.com/3Z14WN594hb",
 	},
 ];
