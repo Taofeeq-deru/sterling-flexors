@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Slider from "react-slick";
 import { Button, YoutubeVideo } from "components";
 import {
 	certified,
@@ -19,33 +20,46 @@ import {
 	ClientProps,
 	vibes,
 	VibeProps,
+	headers,
+	HeadersProps,
 } from "./partials";
 import session from "images/session-bg.png";
 import { form, youtube } from "utilities/constants";
 
 const Homepage: FC = () => {
+	const settings = {
+		dots: false,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		pauseOnHover: true,
+		autoplay: true,
+	};
+
 	return (
 		<div className="homepage">
-			<header>
-				<div className="header-text-cont w-full h-full flex flex-col justify-center items-center">
-					<h1 className="text-center">
-						Live Fitness/Workout Session Tailored to your fitness needs.
-					</h1>
-					<p className="text-center my-4">
-						Enjoy a 1-on-1 live fitness training with an expert fitness trainer
-						right on your screen. You only get trained per your needs, easy to
-						get started and affordable.
-					</p>
-					<Button
-						text="Book Fitness Session"
-						kind="link"
-						btnType="primary"
-						to={form}
-						target="_form"
-						className="my-3 mx-auto"
-					/>
-				</div>
-			</header>
+			<Slider {...settings}>
+				{headers?.map((item: HeadersProps, i: number) => (
+					<div key={i}>
+						<header style={{ backgroundImage: `url(${item?.img})` }}>
+							<div className="header-text-cont w-full h-full flex flex-col justify-center items-center">
+								<h1 className="text-center">{item?.heading}</h1>
+								<p className="text-center mt-4">{item?.body}</p>
+								<p className="text-center mb-4">{item?.extraText}</p>
+								<Button
+									text={item?.btnText}
+									kind="link"
+									btnType="primary"
+									to={item?.btnLink}
+									target="_form"
+									className="my-3 mx-auto"
+								/>
+							</div>
+						</header>
+					</div>
+				))}
+			</Slider>
 			<section className="trainers-section">
 				<h1 className="title text-center mb-3">Meet our Trainers</h1>
 				<p className="sub-title-lg text-center mb-12">
