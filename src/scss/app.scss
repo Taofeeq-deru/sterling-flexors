@@ -7,6 +7,10 @@
 @import "./button.scss";
 @import "./homepage.scss";
 
+#root {
+	overflow-x: clip;
+}
+
 body {
 	font-family: "Neue Haas Unica";
 }
