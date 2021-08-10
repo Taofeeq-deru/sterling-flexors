@@ -551,7 +551,7 @@ export const loader = (
 				type="rotate"
 				from="0 20 20"
 				to="360 20 20"
-				dur="0.5s"
+				dur="1.0s"
 				repeatCount="indefinite"
 			/>
 		</path>

@@ -22,7 +22,7 @@ export const headers = [
 	},
 	{
 		img: banner2,
-		heading: "Fitness Summer Challenge Starting 14th to 25th of July ",
+		heading: "Fitness Summer Challenge Starting 14th of August to 25th of September",
 		body: "6-weeks Challenge Targeted at Weight Loss, Tummy blast, Shedding Arms & Thigh Fat",
 		extraText: "Subscription fee ₦5000",
 		btnLink: "https://forms.gle/d6CEVqTARgmP16Zy5",
